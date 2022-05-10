@@ -12,7 +12,7 @@ public class FileJoinAdvMapper extends Mapper<LongWritable, Text, Text, JoinWrit
 	String inputFileName;
 	
 	@Override
-	protected void setup(Mapper<LongWritable, Text, Text, JoinWritable>.Context context) throws IOException, InterruptedException {
+	protected void setup(Mapper<LongWritable, Text, Text, JoinWritable>. Context context) throws IOException, InterruptedException {
 		FileSplit filesplit = (FileSplit)context.getInputSplit();
 		inputFileName = filesplit.getPath().getName();
 	}
